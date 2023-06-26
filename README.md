@@ -96,7 +96,7 @@ After this update, Fortify SCA works as expectation.
 ## Final solution?
 
 - First, Fortify SCA 23.1 claims that it supports Kotlin 1.7: https://www.microfocus.com/documentation/fortify-core-documents/2310/Fortify_Sys_Reqs_23.1.0/index.htm#SCA/SCA_SupportedLangs.htm?TocPath=Fortify%2520Static%2520Code%2520Analyzer%2520Requirements%257CLanguages%257C_____0 . kotlin-gradle-plugin 1.7 is the build suite of Kotlin 1.7, so Fortofy SCA 23.1 must also support kotlin-gradle-plugin 1.7.
-- Second, Fortify SCA 23.1 ``Tools/init-script-tplt.gradle`` script use internal class and method of kotlin-gradle-plugin to translate the Kotlin code.
-- Third, Fortify SCA 23.1 uses an already removed mothed of kotlin-gradle-plugin 1.7: the getSource() mothed of org.jetbrains.kotlin.gradle.tasks.KotlinCompile class.
+- Second, Fortify SCA 23.1 ``Tools/init-script-tplt.gradle`` script uses internal class and method of kotlin-gradle-plugin to translate the Kotlin code.
+- Third, Fortify SCA 23.1 uses an already removed method of kotlin-gradle-plugin 1.7: the getSource() mothed of org.jetbrains.kotlin.gradle.tasks.KotlinCompile class.
 
 Base on the above analysis, it's a bug of Fortify SCA 23.1, and it must be fixed. 
